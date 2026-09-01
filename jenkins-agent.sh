@@ -3,12 +3,12 @@
 #resize disk from 20GB to 50GB
 growpart /dev/nvme0n1 4
 
-lvextend -L +10G /dev/mapper/RootVG-homeVol
 lvextend -L +10G /dev/mapper/RootVG-varVol
-lvextend -l +100%FREE /dev/mapper/RootVG-varTmpVol
+lvextend -L +10G /dev/mapper/RootVG-rootVol
+lvextend -l +100%FREE /dev/mapper/RootVG-homeVol
 
-xfs_growfs /home
-xfs_growfs /var/tmp
+xfs_growfs /
 xfs_growfs /var
+xfs_growfs /home
 
 yum install java-17-openjdk -y
