@@ -11,4 +11,4 @@ xfs_growfs /
 xfs_growfs /var
 xfs_growfs /home
 
-yum install java-17-openjdk -y
+yum install java-21-openjdk -y
