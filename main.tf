@@ -1,8 +1,8 @@
 resource "aws_instance" "jenkins" {
   ami                    = data.aws_ami.ami_info.id
   instance_type          = "t3.small"
-  subnet_id              = "subnet-06bb1587d66a74e4a" # replace your Subnet
-  vpc_security_group_ids = ["sg-024229c50f3b369a1"]   # replace your SG
+  subnet_id              = "subnet-046f7209b4950a2b8" # replace your Subnet
+  vpc_security_group_ids = ["sg-0bde5a0ee65a10738"]   # replace your SG
   user_data              = file("jenkins.sh")
 
   root_block_device {
@@ -19,8 +19,8 @@ resource "aws_instance" "jenkins" {
 resource "aws_instance" "jenkins_agent" {
   ami                    = data.aws_ami.ami_info.id
   instance_type          = "t3.small"
-  subnet_id              = "subnet-06bb1587d66a74e4a" # replace your Subnet
-  vpc_security_group_ids = ["sg-024229c50f3b369a1"]   # replace your SG
+  subnet_id              = "subnet-046f7209b4950a2b8" # replace your Subnet
+  vpc_security_group_ids = ["sg-0bde5a0ee65a10738"]   # replace your SG
   user_data              = file("jenkins-agent.sh")
 
   root_block_device {
