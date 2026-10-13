@@ -29,5 +29,3 @@ Restart Jenkins once plugins are installed
 * Location is https://github.com/daws-81s/jenkins-shared-library.git
 
 Now Jenkins is ready to use.
-
-Best to use Jenkins Instead of Github-Actions for big projects
