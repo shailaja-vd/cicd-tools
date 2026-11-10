@@ -3,7 +3,7 @@ data "aws_ami" "ami_info" {
     owners            = ["973714476881"]
     filter {
         name   = "name"
-        values = ["Redhat-9-DevOps-Practice"]
+        values = ["Redhat-10-DevOps-Practice"]
     }
 
     filter {
